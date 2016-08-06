@@ -20,7 +20,7 @@ Diagnostic.repl = 'pry'
 # In a Ruby string, write what you would write to properly name a variable in
 # Ruby that read in English as "star wars episode viii".
 
-Diagnostic.variable = 'a = "star wars episode vii"'
+Diagnostic.variable = 'star_wars_episode_vii'
 
 # String interpolation in Ruby
 #
@@ -29,7 +29,7 @@ Diagnostic.variable = 'a = "star wars episode vii"'
 
 character = 'Jar Jar Binks'
 
-Diagnostic.interpolation = '#{name} is really a Sith Lord.'
+Diagnostic.interpolation = '#{character} is really a Sith Lord.'
 
 # Define a predicate method in Ruby
 #
@@ -38,19 +38,23 @@ Diagnostic.interpolation = '#{name} is really a Sith Lord.'
 
 # define your method here
 
-Diagnostic.predicate = obj.select {|num| num.odd?}
+Diagnostic.predicate = '
+def odd? (n)
+#something with n
+end
+'
 
 # Numbers in Ruby
 #
 # What is the type of object in Ruby for decimal numbers? Write your answer in
 # a Ruby string.
 
-Diagnostic.decimal = 'number.to_f'
+Diagnostic.decimal = 'float'
 
 # What is the type of object in Ruby for integer numbers? Write your answer in
 # a Ruby string.
 
-Diagnostic.integer = 'number.to_i'
+Diagnostic.integer = 'integer'
 
 # Write an example of a decimal and an integer in Ruby. Replace the Ruby strings
 # in the following array with your examples.
@@ -78,7 +82,7 @@ end
 
 # Predict what value will be returned. Write your response as a Ruby string.
 
-Diagnostic.flow_control = 'Just your average billionaire'
+Diagnostic.flow_control = 'The Dark Knight'
 
 # In a Ruby string, write what keyword you use for "else if" clauses in Ruby.
 
@@ -115,10 +119,11 @@ Diagnostic.array_add_to = '[12, 34, nil, nil, 99]'
 # Use shorthand to make this one line long.
 # Write your response as a Ruby string.
 
-Diagnostic.person_hash = 'person = %w(first_name: #{first_name} age: #{age} )'
+Diagnostic.person_hash = 'Hash.new
+person_hash = {age: 30, first_name: "Natasa"}'
 
 # Set a default return value to your `person` hash that concatenates the value
 # of person[:first_name] and a message about them.
 # Write your response as a Ruby string.
 
-Diagnostic.hash_default = 'person.default("First name is: " + #{first_name})'
+Diagnostic.hash_default = 'person.default = "#{person[:first_name]} is a ok"'
